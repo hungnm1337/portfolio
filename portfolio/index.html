@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Nguyen Manh Hung - .NET Developer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        :root {
+            --text-primary: rgba(0, 0, 0, 0.87);
+            --text-secondary: rgba(0, 0, 0, 0.6);
+            --background-color: #ffffff;
+            --divider-color: #000;
+            --font-family: 'Outfit', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: #f5f5f5;
+            color: var(--text-primary);
+            line-height: 1.5;
+            font-size: 13.5px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 956px;
+            margin: 20px auto;
+            padding: 40px 56px;
+            background-color: var(--background-color);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            min-height: 11in;
+        }
+
+        .bold {
+            font-weight: 700;
+        }
+
+        .italic {
+            font-style: italic;
+        }
+
+        .uppercase {
+            text-transform: uppercase;
+        }
+
+        .underline {
+            text-decoration: underline;
+        }
+
+        .fs40 {
+            font-size: 36px;
+            line-height: 1.2;
+        }
+
+        .fs16 {
+            font-size: 15px;
+        }
+
+        .ls28 {
+            letter-spacing: 0.3px;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: var(--divider-color);
+            margin: 6px 0 12px 0;
+            width: 100%;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        header .header {
+            margin-bottom: 24px;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 4px;
+        }
+
+        .header-left {
+            width: 100%;
+        }
+
+        .header-right {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0;
+            font-size: 12.5px;
+            color: var(--text-primary);
+            white-space: nowrap;
+        }
+
+        .header-right a {
+            color: inherit;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .contact-item+.contact-item::before {
+            content: '·';
+            margin: 0 8px;
+            color: var(--text-secondary);
+            font-weight: 700;
+        }
+
+        .contact-icon {
+            width: 18px;
+            text-align: center;
+            flex-shrink: 0;
+            color: #000;
+        }
+
+        .contact-icon i {
+            font-size: 12px;
+            color: #000;
+        }
+
+        .title {
+            margin-bottom: 2px;
+        }
+
+        .position-sub {
+            font-size: 17px;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+
+        .content {
+            margin-bottom: 16px;
+        }
+
+        .content-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 4px;
+        }
+
+        .content-details {
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        .content-list {
+            list-style-type: disc;
+            padding-left: 18px;
+        }
+
+        .list-item-flex {
+            margin-bottom: 3px;
+        }
+
+        .content-text p {
+            margin-bottom: 4px;
+        }
+
+        .content-text span {
+            font-weight: 700;
+        }
+
+        /* Project template styles */
+        .project-meta {
+            display: grid;
+            grid-template-columns: 90px 1fr;
+            gap: 2px 8px;
+            margin-top: 5px;
+        }
+
+        .project-meta-label {
+            font-weight: 700;
+            color: var(--text-primary);
+            white-space: nowrap;
+        }
+
+        .project-meta-value {
+            color: var(--text-primary);
+        }
+
+        .tech-tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        .tech-tag {
+            background-color: #f0f0f0;
+            border: 1px solid #d0d0d0;
+            border-radius: 3px;
+            padding: 0px 6px;
+            font-size: 12px;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .project-highlights {
+            list-style-type: disc;
+            padding-left: 18px;
+            margin-top: 2px;
+        }
+
+        .project-highlights li {
+            margin-bottom: 2px;
+        }
+
+        @media print {
+            body {
+                background-color: #fff;
+                margin: 0;
+            }
+
+            .container {
+                width: 100%;
+                max-width: 100%;
+                margin: 0;
+                padding: 30px 45px;
+                box-shadow: none;
+            }
+
+            a {
+                text-decoration: none;
+                color: #000;
+            }
+
+            .contact-icon i {
+                color: #000 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header">
+                <div class="header-left">
+                    <h1 class="title bold fs40">Nguyen Manh Hung</h1>
+                    <div class="position-sub italic">Lập Trình Viên Web</div>
+                </div>
+                <div class="header-right ls28">
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="fa-solid fa-location-dot"></i></span>
+                        <span>Hà Nội, Việt Nam</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="fa-solid fa-cake-candles"></i></span>
+                        <span>18/12/2003</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="fa-solid fa-mars"></i></span>
+                        <span>Nam</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
+                        <a href="mailto:hungnm1337@gmail.com">hungnm1337@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="fa-solid fa-phone"></i></span>
+                        <span>+84 037 341 1812</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="fa-brands fa-github"></i></span>
+                        <a href="https://github.com/hungnm1337">github.com/hungnm1337</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="summary">
+            <h2 class="subtitle">Tóm tắt nghề nghiệp</h2>
+            <div class="divider"></div>
+            <div class="content">
+                <p class="ls28">
+                    <strong>Lập trình viên Full Stack</strong> đam mê xây dựng các ứng dụng web có khả năng mở rộng với
+                    <strong>ASP.NET Core và Next.js</strong>.
+                    Có kinh nghiệm thực tế trong <strong>quản lý vòng đời phát triển đầy đủ</strong> và điều phối
+                    môi trường cloud/VPS cho các dự án đa dạng.
+                    Tìm kiếm môi trường chuyên nghiệp để phát huy chuyên môn kỹ thuật trong việc giải quyết
+                    các thách thức kinh doanh thực tế.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="subtitle">Kinh nghiệm làm việc</h2>
+            <div class="divider"></div>
+            <div class="content-top">
+                <div class="content-title">
+                    <p class="fs16 bold uppercase">Lập trình viên Full Stack</p>
+                    <p class="bold italic">Nemark</p>
+                </div>
+                <div class="content-details">
+                    <p class="bold">Tháng 11/2025 — Tháng 02/2026</p>
+                    <p class="location ls28">Hà Nội</p>
+                </div>
+            </div>
+            <ul class="content-list">
+                <li class="list-item-flex"><strong>Điều phối dự án:</strong> Quản lý quy trình phát triển để bàn giao 5+ giải pháp phần mềm và MVP đa dạng.</li>
+                <li class="list-item-flex"><strong>Triển khai kỹ thuật:</strong> Phát triển backend cốt lõi bằng
+                    <strong>ASP.NET Core</strong> và tối ưu hóa frontend với <strong>Next.js/Angular</strong>.
+                </li>
+                <li class="list-item-flex"><strong>DevOps:</strong> Triển khai pipeline trên VPS Windows/Linux sử dụng
+                    <strong>Docker</strong> và aaPanel.
+                </li>
+                <li class="list-item-flex"><strong>QA & Tiêu chuẩn:</strong> Áp dụng nghiêm ngặt <strong>Code Review</strong>
+                    (StyleCop) và Unit Testing (xUnit) để đảm bảo codebase dễ bảo trì.</li>
+            </ul>
+
+            <div class="content-top">
+                <div class="content-title">
+                    <p class="fs16 bold uppercase">Thực tập sinh Kỹ thuật phần mềm (Trưởng nhóm)</p>
+                    <p class="bold italic">FPT Software</p>
+                </div>
+                <div class="content-details">
+                    <p class="bold">Sep 2024 — Jan 2025</p>
+                    <p class="location ls28">Hà Nội</p>
+                </div>
+            </div>
+            <ul class="content-list">
+                <li class="list-item-flex"><strong>Lãnh đạo:</strong> Dẫn dắt phát triển nền tảng <strong>"Thương mại điện tử điện thoại di động"</strong> theo tiêu chuẩn kỹ thuật doanh nghiệp.</li>
+                <li class="list-item-flex"><strong>Quản lý:</strong> Tối ưu hóa hiệu suất nhóm bằng
+                    <strong>Agile/Scrum</strong> và đóng góp vào thiết kế <strong>Kiến trúc hệ thống</strong>.
+                </li>
+                <li class="list-item-flex"><strong>Bàn giao dự án:</strong> Bàn giao thành công demo sản phẩm ổn định đáp ứng đầy đủ yêu cầu nghiệp vụ và luồng người dùng.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="subtitle">Học vấn</h2>
+            <div class="divider"></div>
+            <div class="content">
+                <div class="content-top">
+                    <div class="content-title">
+                        <p class="fs16 bold uppercase">Cử nhân Kỹ thuật phần mềm</p>
+                        <p class="bold italic">FPT University</p>
+                    </div>
+                    <div class="content-details">
+                        <p class="bold">Sep 2021 — Dec 2025</p>
+                        <p class="location ls28">Hà Nội</p>
+                    </div>
+                </div>
+                <ul class="content-list">
+                    <li class="list-item-flex"><span class="bold">Chuyên ngành:</span> Công nghệ .NET. <span
+                            class="bold">GPA:</span> 3.02/4.0.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="subtitle">Kỹ năng</h2>
+            <div class="divider"></div>
+            <div class="content item">
+                <div class="content-text ls28">
+                    <p><span>Backend:</span> C#, .NET Core 8, ASP.NET MVC/Web API, Entity Framework, LINQ,
+                        Winforms</p>
+                    <p><span>Database:</span> MS SQL Server (T-SQL, Stored Procedures, Triggers, Transactions, Index,
+                        View)</p>
+                    <p><span>Frontend:</span> TypeScript (ES6), Angular 18, Next.js, HTML5/CSS3, Bootstrap, jQuery, AJAX
+                    </p>
+                    <p><span>DevOps & Deployment:</span> Docker, VPS Management (aaPanel), IIS/Nginx</p>
+                    <p><span>Testing & Quality:</span> Unit Test (xUnit/NUnit), Selenium WebDriver</p>
+                    <p><span>Tools & Methods:</span> Git (GitHub), Jira, Agile/Scrum</p>
+                    <p><span>Ngoại ngữ:</span> Tiếng Anh — B1 Trung cấp</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="subtitle">Dự án</h2>
+            <div class="divider"></div>
+
+            <!-- Project 1: Lumina -->
+            <div class="content">
+                <div class="content-top">
+                    <div class="content-title">
+                        <p class="fs16 bold uppercase">Lumina — AI-Powered TOEIC Practice System</p>
+                        <p class="bold italic">Đồ án tốt nghiệp · Đại học FPT</p>
+                    </div>
+                    <div class="content-details">
+                        <p class="bold">Sep 2024 — Dec 2025</p>
+                        <p class="location ls28">Ha Noi</p>
+                    </div>
+                </div>
+                <div class="project-meta ls28">
+                    <span class="project-meta-label">Vai trò:</span>
+                    <span class="project-meta-value">Trưởng nhóm &amp; Lập trình viên Full Stack (Toàn bộ trách nhiệm)</span>
+
+                    <span class="project-meta-label">Mô tả:</span>
+                    <span class="project-meta-value">Nền tảng luyện thi TOEIC toàn diện với chấm điểm tự động bằng AI cho cả 4 kỹ năng (Nghe, Đọc, Nói, Viết).</span>
+
+                    <span class="project-meta-label">Công việc của tôi:</span>
+                    <span class="project-meta-value">
+                        <ul class="project-highlights">
+                            <li>Thiết kế kiến trúc hệ thống và RESTful API với <strong>ASP.NET Core</strong>; xây dựng schema cơ sở dữ liệu với <strong>SQL Server</strong>.</li>
+                            <li>Xây dựng toàn bộ frontend Angular 18 bao gồm giao diện thi, dashboard kết quả và trang quản trị.
+                            </li>
+                            <li>Phát triển luồng <strong>Reading</strong> — bộ câu hỏi, luyện tập có tính giờ và theo dõi kết quả chấm điểm tự động.</li>
+                            <li>Phát triển luồng <strong>Writing</strong> — nộp bài luận với <strong>chấm điểm bằng AI</strong> và tạo phản hồi tự động.</li>
+                            <li>Xây dựng module <strong>Mock Test</strong> — bài thi mô phỏng 4 kỹ năng đầy đủ theo cấu trúc và thang điểm TOEIC thực tế.</li>
+                            <li>Triển khai tính năng <strong>Articles + Take Note</strong> — thư viện đọc với ghi chú cá nhân theo từng bài.</li>
+                            <li>Xây dựng tính năng theo dõi <strong>Lịch sử thi</strong> — lịch sử, phân tích điểm số và thống kê tiến độ từng người dùng.</li>
+                            <li>Viết <strong>500+ test case</strong> (Unit test, Integration test, System test, AI result test) để kiểm tra logic chấm điểm.</li>
+                            <li>Dẫn dắt lập kế hoạch sprint, phân công nhiệm vụ và code review cho nhóm 5 người.</li>
+                        </ul>
+                    </span>
+
+                    <span class="project-meta-label">Công nghệ:</span>
+                    <span class="project-meta-value">
+                        <div class="tech-tag-list">
+                            <span class="tech-tag">ASP.NET Core API</span>
+                            <span class="tech-tag">Angular 18</span>
+                            <span class="tech-tag">SQL Server</span>
+                            <span class="tech-tag">xUnit</span>
+                            <span class="tech-tag">Azure AI</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </span>
+
+                    <span class="project-meta-label">Điểm nổi bật:</span>
+                    <span class="project-meta-value">
+                        <ul class="project-highlights">
+                            <li>Thiết kế toàn bộ hệ thống từ đầu; dẫn dắt nhóm 5 người qua toàn bộ vòng đời phát triển phần mềm.</li>
+                            <li>Triển khai <strong>1,500+ test case</strong> (Unit &amp; System Test) bằng
+                                <strong>xUnit</strong> để đảm bảo độ chính xác của chấm điểm AI.
+                            </li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Project 2: MediMate -->
+            <div class="content">
+                <div class="content-top">
+                    <div class="content-title">
+                        <p class="fs16 bold uppercase">MediMate — AI-Powered Medical E-commerce</p>
+                        <p class="bold italic">Dự án cá nhân</p>
+                    </div>
+                    <div class="content-details">
+                        <p class="bold">Jan 2026 — Feb 2026</p>
+                        <p class="location ls28">Ha Noi</p>
+                    </div>
+                </div>
+                <div class="project-meta ls28">
+                    <span class="project-meta-label">Vai trò:</span>
+                    <span class="project-meta-value">Lập trình viên duy nhất (Thiết kế, Phát triển &amp; Triển khai)</span>
+
+                    <span class="project-meta-label">Mô tả:</span>
+                    <span class="project-meta-value">Nền tảng <strong>thương mại điện tử dược phẩm</strong> full-stack
+                        với tư vấn sức khỏe AI, webhook thanh toán thời gian thực, phân tích dữ liệu quản trị và
+                        kiểm soát truy cập theo vai trò.</span>
+
+                    <span class="project-meta-label">Công việc của tôi:</span>
+                    <span class="project-meta-value">
+                        <ul class="project-highlights">
+                            <li>Xây dựng thương mại điện tử dược phẩm full-stack với <strong>Next.js 16 API Routes</strong>, danh mục sản phẩm, giỏ hàng và quy trình thanh toán.</li>
+                            <li>Tích hợp <strong>cổng thanh toán SePay</strong> với webhook thời gian thực để tự động cập nhật trạng thái đơn hàng.</li>
+                            <li>Triển khai chatbot tư vấn sức khỏe <strong>Google Gemini AI</strong> qua API routes tùy chỉnh với <strong>lịch sử hội thoại</strong>.</li>
+                            <li>Phát triển <strong>dashboard quản trị</strong> với phân tích doanh thu/đơn hàng
+                                (<strong>Recharts</strong>) và <strong>xuất file Excel</strong>.</li>
+                            <li>Áp dụng <strong>kiểm soát truy cập theo vai trò</strong> bằng <strong>Next.js
+                                    Middleware</strong> để bảo vệ các route quản trị.</li>
+                            <li>Tối ưu hiệu suất với <strong>truy vấn Supabase song song</strong> và
+                                <strong>SWR</strong> cache phía client; thời gian tải trung bình <strong>1.8s</strong>.</li>
+                            <li>Triển khai trên <strong>Vercel</strong> với CI/CD tự động từ GitHub.</li>
+                        </ul>
+                    </span>
+
+                    <span class="project-meta-label">Công nghệ:</span>
+                    <span class="project-meta-value">
+                        <div class="tech-tag-list">
+                            <span class="tech-tag">Next.js 16 (React 19)</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Tailwind CSS v4</span>
+                            <span class="tech-tag">PostgreSQL (Supabase)</span>
+                            <span class="tech-tag">Google Gemini AI</span>
+                            <span class="tech-tag">SePay / VietQR</span>
+                            <span class="tech-tag">Recharts</span>
+                            <span class="tech-tag">SWR</span>
+                            <span class="tech-tag">Vercel</span>
+                        </div>
+                    </span>
+
+                    <span class="project-meta-label">Điểm nổi bật:</span>
+                    <span class="project-meta-value">
+                        <ul class="project-highlights">
+                            <li><strong>Webhook SePay</strong> thời gian thực tự động cập nhật trạng thái đơn hàng; xác thực qua
+                                Email/Mật khẩu &amp; <strong>Google OAuth</strong>.</li>
+                            <li>Dashboard phân tích quản trị với <strong>Recharts</strong> (doanh thu/đơn hàng) và
+                                <strong>xuất file Excel</strong>.</li>
+                            <li>Đạt thời gian tải trang trung bình <strong>1.8s</strong> qua SSR, truy vấn song song và
+                                cache <strong>SWR</strong>. Hoàn toàn responsive 320px–1440px+.</li>
+                            <li><strong>Trực tuyến:</strong> <a href="https://www.medimate-socuuyte.com/"
+                                    class="underline">medimate-socuuyte.com</a></li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
