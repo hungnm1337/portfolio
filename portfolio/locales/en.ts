@@ -18,13 +18,13 @@ const en = {
   },
   about: {
     title: 'About',
-    summary: `Full Stack developer passionate about building scalable web applications with ASP.NET Core and Next.js. Experienced in managing the full software development lifecycle and orchestrating cloud/VPS environments across diverse projects. Seeking a professional environment to apply technical expertise in solving real-world business challenges.`,
+    summary: `Full Stack developer passionate about building scalable web applications with ASP.NET Core and Next.js. Experienced in managing the full software development lifecycle and orchestrating cloud/VPS environments across diverse projects.`,
     info: [
       { label: 'Date of birth', value: '18/12/2003' },
       { label: 'Gender', value: 'Male' },
       { label: 'Location', value: 'Hanoi, Vietnam' },
       { label: 'Email', value: 'hungnm1337@gmail.com' },
-      { label: 'Phone', value: '+84 037 341 1812' },
+      { label: 'Phone', value: '+84 37 341 1812' },
       { label: 'GitHub', value: 'github.com/hungnm1337' },
     ],
   },
@@ -33,15 +33,15 @@ const en = {
     groups: [
       {
         label: 'Backend',
-        items: ['C#', '.NET Core 8', 'ASP.NET MVC', 'ASP.NET Web API', 'Entity Framework', 'LINQ', 'WinForms'],
+        items: ['.NET Core 8', 'ASP.NET MVC', 'ASP.NET Web API', 'WinForms', 'Node.js'],
       },
       {
         label: 'Database',
-        items: ['MS SQL Server', 'T-SQL', 'Stored Procedures', 'Triggers', 'Transactions', 'Index', 'View'],
+        items: ['MS SQL Server', 'Supabase', 'MySQL', 'PostgreSQL'],
       },
       {
         label: 'Frontend',
-        items: ['TypeScript (ES6)', 'Angular 18', 'Next.js', 'HTML5/CSS3', 'Bootstrap', 'jQuery', 'AJAX'],
+        items: ['TypeScript (ES6)', 'Angular 18', 'Next.js'],
       },
       {
         label: 'DevOps',

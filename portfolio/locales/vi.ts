@@ -18,13 +18,13 @@ const vi = {
   },
   about: {
     title: 'Giới thiệu',
-    summary: `Lập trình viên Full Stack đam mê xây dựng các ứng dụng web có khả năng mở rộng với ASP.NET Core và Next.js. Có kinh nghiệm thực tế trong quản lý vòng đời phát triển đầy đủ và điều phối môi trường cloud/VPS cho các dự án đa dạng. Tìm kiếm môi trường chuyên nghiệp để phát huy chuyên môn kỹ thuật trong việc giải quyết các thách thức kinh doanh thực tế.`,
+    summary: `Lập trình viên Full Stack đam mê xây dựng các ứng dụng web có khả năng mở rộng với ASP.NET Core và Next.js. Có kinh nghiệm thực tế trong quản lý vòng đời phát triển đầy đủ và điều phối môi trường cloud/VPS cho các dự án đa dạng.`,
     info: [
       { label: 'Ngày sinh', value: '18/12/2003' },
       { label: 'Giới tính', value: 'Nam' },
       { label: 'Địa chỉ', value: 'Hà Nội, Việt Nam' },
       { label: 'Email', value: 'hungnm1337@gmail.com' },
-      { label: 'Điện thoại', value: '+84 037 341 1812' },
+      { label: 'Điện thoại', value: '037 341 1812' },
       { label: 'GitHub', value: 'github.com/hungnm1337' },
     ],
   },
@@ -33,15 +33,15 @@ const vi = {
     groups: [
       {
         label: 'Backend',
-        items: ['C#', '.NET Core 8', 'ASP.NET MVC', 'ASP.NET Web API', 'Entity Framework', 'LINQ', 'WinForms'],
+        items: ['.NET Core 8', 'ASP.NET MVC', 'ASP.NET Web API', 'WinForms', 'Node.js'],
       },
       {
         label: 'Database',
-        items: ['MS SQL Server', 'T-SQL', 'Stored Procedures', 'Triggers', 'Transactions', 'Index', 'View'],
+        items: ['MS SQL Server', 'Supabase', 'MySQL', 'PostgreSQL'],
       },
       {
         label: 'Frontend',
-        items: ['TypeScript (ES6)', 'Angular 18', 'Next.js', 'HTML5/CSS3', 'Bootstrap', 'jQuery', 'AJAX'],
+        items: ['TypeScript (ES6)', 'Angular 18', 'Next.js'],
       },
       {
         label: 'DevOps',

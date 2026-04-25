@@ -38,11 +38,10 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
           ? 'py-3 bg-[#0f0f0f]/90 backdrop-blur-xl border-b border-[#2e2e2e]'
           : 'py-5 bg-transparent border-b border-transparent'
-      }`}
+        }`}
     >
       <div className="wrap flex items-center justify-between gap-6">
         {/* Logo */}
@@ -57,16 +56,14 @@ export default function Navbar() {
             <a
               key={id}
               href={`#${id}`}
-              className={`text-[13.5px] transition-colors duration-200 relative pb-0.5 group ${
-                active === id ? 'text-[#f0f0f0]' : 'text-[#888888] hover:text-[#f0f0f0]'
-              }`}
+              className={`text-[13.5px] transition-colors duration-200 relative pb-0.5 group ${active === id ? 'text-[#f0f0f0]' : 'text-[#888888] hover:text-[#f0f0f0]'
+                }`}
               onClick={() => setOpen(false)}
             >
               {navLabels[id]}
               <span
-                className={`absolute bottom-0 left-0 h-px bg-[#f0f0f0] transition-all duration-250 ${
-                  active === id ? 'w-full' : 'w-0 group-hover:w-full'
-                }`}
+                className={`absolute bottom-0 left-0 h-px bg-[#f0f0f0] transition-all duration-250 ${active === id ? 'w-full' : 'w-0 group-hover:w-full'
+                  }`}
               />
             </a>
           ))}

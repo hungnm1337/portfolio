@@ -45,25 +45,25 @@ export default function Experience() {
 
                   {/* Card */}
                   <div className="bg-[#1c1c1c] border border-[#2e2e2e] rounded-2xl p-6 hover:border-[#3a3a3a] transition-all duration-300">
-                    <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
-                      <div>
+                    <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 mb-4">
+                      <div className="flex-1 min-w-0 sm:pr-4">
                         <div className="flex items-center gap-2 mb-1">
                           <Briefcase size={13} className="text-[#555555]" />
-                          <span className="font-[family-name:var(--font-mono)] text-[11px] text-[#555555] uppercase tracking-wider">
+                          <span className="font-[family-name:var(--font-heading)] text-[15px] font-semibold text-[#f0f0f0] tracking-wider truncate">
                             {job.company}
                           </span>
                         </div>
-                        <h3 className="font-[family-name:var(--font-heading)] text-[17px] font-semibold text-[#f0f0f0]">
+                        <h3 className="font-[family-name:var(--font-heading)] text-[17px] font-semibold text-[#f0f0f0] break-words">
                           {job.position}
                         </h3>
                       </div>
-                      <div className="text-right shrink-0">
-                        <div className="flex items-center gap-1 text-[12px] text-[#555555] justify-end mb-0.5">
-                          <Calendar size={12} />
+                      <div className="shrink-0 mt-1 sm:mt-0">
+                        <div className="flex items-center sm:justify-end gap-1.5 font-[family-name:var(--font-heading)] text-[15px] font-semibold text-[#f0f0f0] mb-1 sm:mb-0.5">
+                          <Calendar size={15} className="shrink-0" />
                           <span>{job.period}</span>
                         </div>
-                        <div className="flex items-center gap-1 text-[12px] text-[#555555] justify-end">
-                          <MapPin size={12} />
+                        <div className="flex items-center sm:justify-end gap-1 text-[12px] text-[#555555]">
+                          <MapPin size={12} className="shrink-0" />
                           <span>{job.location}</span>
                         </div>
                       </div>
