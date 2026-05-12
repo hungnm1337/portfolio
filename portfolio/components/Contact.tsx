@@ -56,9 +56,7 @@ export default function Contact({ onContactClick }: ContactProps) {
               <ArrowRight size={14} />
             </button>
 
-            <p className="text-[12.5px] text-[#555555] mono mt-3">
-              — hoặc liên hệ trực tiếp bên dưới
-            </p>
+
           </motion.div>
 
           {/* Links */}
