@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { MapPin, Calendar, GraduationCap, Briefcase } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -95,9 +96,15 @@ export default function Experience() {
               {education.sectionTitle}
             </p>
             <div className="bg-[#1c1c1c] border border-[#2e2e2e] rounded-2xl p-6 hover:border-[#3a3a3a] transition-all duration-300">
-              <div className="flex items-start gap-3 mb-4">
-                <div className="w-9 h-9 rounded-lg bg-[#242424] border border-[#2e2e2e] flex items-center justify-center shrink-0">
-                  <GraduationCap size={16} className="text-[#888888]" />
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-12 h-12 rounded-lg bg-white border border-[#2e2e2e] flex items-center justify-center shrink-0 overflow-hidden p-1">
+                  <Image 
+                    src="/FPT-University-Logo-Vector.svg-.png" 
+                    alt="FPT University" 
+                    width={40} 
+                    height={40}
+                    className="object-contain"
+                  />
                 </div>
                 <div>
                   <h3 className="font-[family-name:var(--font-heading)] text-[15px] font-semibold text-[#f0f0f0] leading-snug">
@@ -116,9 +123,14 @@ export default function Experience() {
                   <MapPin size={12} />
                   <span>{education.location}</span>
                 </div>
-                <p className="text-[13px] text-[#888888] mt-2 font-[family-name:var(--font-mono)]">
-                  {education.detail}
-                </p>
+                <div className="mt-2 space-y-1">
+                  <p className="text-[13px] text-[#888888] font-[family-name:var(--font-mono)]">
+                    {education.major}
+                  </p>
+                  <p className="text-[13px] text-[#888888] font-[family-name:var(--font-mono)]">
+                    {education.gpa}
+                  </p>
+                </div>
               </div>
             </div>
           </motion.div>

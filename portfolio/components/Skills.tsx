@@ -1,6 +1,7 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence, LayoutGroup } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { 
   SiDotnet, SiTypescript, SiAngular, SiNextdotjs, SiDocker, SiNginx, SiSelenium, SiGithub, SiJira, SiSupabase, SiMysql, SiPostgresql, SiNodedotjs 
@@ -35,11 +36,119 @@ const getSkillIcon = (skillName: string) => {
   return <FaCode className="text-xl text-gray-400" />;
 };
 
+function SkillCard({ group, gi }: { group: any; gi: number }) {
+  const [isHovering, setIsHovering] = useState(false);
+  const [isActive, setIsActive] = useState(false);
+
+  // Check every 0.2s before switching state to prevent jitter
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsActive(isHovering);
+    }, 200);
+    return () => clearTimeout(timer);
+  }, [isHovering]);
+
+  return (
+    <motion.div
+      className="bg-[#1c1c1c] border border-[#2e2e2e] rounded-2xl p-6 hover:border-[#3a3a3a] transition-colors duration-500 shadow-lg shadow-black/20"
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ 
+        y: { duration: 0.6, delay: gi * 0.1 },
+        layout: { 
+          duration: 1.0, 
+          ease: [0.16, 1, 0.3, 1] 
+        } 
+      }}
+      viewport={{ once: true, margin: '-60px' }}
+      onMouseEnter={() => setIsHovering(true)}
+      onMouseLeave={() => setIsHovering(false)}
+      layout
+    >
+      <motion.h3 
+        layout="position"
+        className="font-[family-name:var(--font-mono)] text-[13px] font-bold tracking-[0.1em] uppercase text-[#777777] mb-5 border-b border-[#2e2e2e] pb-3"
+      >
+        {group.label}
+      </motion.h3>
+
+      <div className="relative overflow-hidden">
+        <AnimatePresence mode="popLayout" initial={false}>
+          {!isActive ? (
+            <motion.div
+              key="marquee"
+              initial={{ opacity: 0, filter: 'blur(4px)' }}
+              animate={{ opacity: 1, filter: 'blur(0px)' }}
+              exit={{ opacity: 0, filter: 'blur(4px)' }}
+              transition={{ duration: 0.6, ease: "easeInOut" }}
+              className="mask-fade-out"
+              layout
+            >
+              <div className="flex animate-marquee gap-3 py-1">
+                {group.items.map((skill: string, si: number) => (
+                  <div
+                    key={`${skill}-${si}`}
+                    className="flex items-center gap-2.5 px-3 py-2 border border-[#3a3a3a] rounded-lg bg-[#242424] text-[#a0a0a0] whitespace-nowrap"
+                  >
+                    {getSkillIcon(skill)}
+                    <span className="font-[family-name:var(--font-mono)] text-[13px] font-medium">
+                      {skill}
+                    </span>
+                  </div>
+                ))}
+                {/* Duplicated items for smooth loop */}
+                {group.items.map((skill: string, si: number) => (
+                  <div
+                    key={`${skill}-${si}-dup`}
+                    className="flex items-center gap-2.5 px-3 py-2 border border-[#3a3a3a] rounded-lg bg-[#242424] text-[#a0a0a0] whitespace-nowrap"
+                  >
+                    {getSkillIcon(skill)}
+                    <span className="font-[family-name:var(--font-mono)] text-[13px] font-medium">
+                      {skill}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          ) : (
+            <motion.div
+              key="grid"
+              initial={{ opacity: 0, y: 15, filter: 'blur(8px)' }}
+              animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+              exit={{ opacity: 0, y: 15, filter: 'blur(8px)' }}
+              transition={{ 
+                duration: 0.7, 
+                ease: [0.16, 1, 0.3, 1]
+              }}
+              className="flex flex-wrap gap-3 py-1"
+              layout
+            >
+              {group.items.map((skill: string, si: number) => (
+                <motion.div
+                  key={`${skill}-${si}-full`}
+                  layout
+                  transition={{ duration: 0.6 }}
+                  className="flex items-center gap-2.5 px-3 py-2 border border-[#555555] rounded-lg bg-[#2a2a2a] text-[#ffffff] shadow-sm shadow-black/40"
+                >
+                  {getSkillIcon(skill)}
+                  <span className="font-[family-name:var(--font-mono)] text-[13px] font-medium">
+                    {skill}
+                  </span>
+                </motion.div>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    </motion.div>
+  );
+}
+
 export default function Skills() {
   const { t } = useLanguage();
 
   return (
-    <section id="skills" className="section-py-alt">
+    <section id="skills" className="section-py-alt mb-5">
       <div className="wrap">
         {/* Header */}
         <motion.div
@@ -54,39 +163,22 @@ export default function Skills() {
           <div className="section-line" />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {t.skills.groups.map((group, gi) => (
-            <motion.div
-              key={group.label}
-              className="bg-[#1c1c1c] border border-[#2e2e2e] rounded-2xl p-6 hover:border-[#3a3a3a] transition-all duration-300 hover:-translate-y-0.5 shadow-lg shadow-black/20"
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: gi * 0.07 }}
-              viewport={{ once: true, margin: '-60px' }}
-            >
-              <h3 className="font-[family-name:var(--font-mono)] text-[13px] font-bold tracking-[0.1em] uppercase text-[#777777] mb-5 border-b border-[#2e2e2e] pb-3">
-                {group.label}
-              </h3>
-              <div className="flex flex-wrap gap-3">
-                {group.items.map((skill, si) => (
-                  <motion.div
-                    key={skill}
-                    className="flex items-center gap-2.5 px-3 py-2 border border-[#3a3a3a] rounded-lg bg-[#242424] text-[#a0a0a0] hover:border-[#555555] hover:text-[#ffffff] hover:bg-[#2a2a2a] transition-all duration-300 cursor-default"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.3, delay: gi * 0.07 + si * 0.04 }}
-                    viewport={{ once: true }}
-                  >
-                    {getSkillIcon(skill)}
-                    <span className="font-[family-name:var(--font-mono)] text-[13px] font-medium">
-                      {skill}
-                    </span>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
-        </div>
+        <motion.div 
+          layout
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start"
+          transition={{
+            layout: { 
+              duration: 0.8, 
+              ease: [0.16, 1, 0.3, 1] 
+            }
+          }}
+        >
+          <LayoutGroup>
+            {t.skills.groups.map((group, gi) => (
+              <SkillCard key={group.label} group={group} gi={gi} />
+            ))}
+          </LayoutGroup>
+        </motion.div>
       </div>
     </section>
   );

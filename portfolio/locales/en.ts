@@ -54,11 +54,8 @@ const en = {
       {
         label: 'Tools',
         items: ['Git / GitHub', 'Jira', 'Agile / Scrum'],
-      },
-      {
-        label: 'Language',
-        items: ['English — B1 Intermediate'],
-      },
+      }
+      
     ],
   },
   experience: {
@@ -94,48 +91,62 @@ const en = {
       school: 'FPT University',
       period: 'Sep 2021 — Dec 2025',
       location: 'Hanoi',
-      detail: 'Major: .NET Technology · GPA: 3.02/4.0',
+      major: 'Major: .NET Technology',
+      gpa: 'GPA: 3.02/4.0',
     },
   },
   projects: {
     title: 'Projects',
     items: [
       {
-        name: 'Lumina',
-        sub: 'AI-Powered TOEIC Practice System',
-        type: 'Graduation Project · FPT University',
-        period: 'Sep 2024 — Dec 2025',
-        role: 'Team Lead & Full Stack Developer (Full ownership)',
-        description: 'Comprehensive TOEIC practice platform with AI-powered auto-grading for all 4 skills (Listening, Reading, Speaking, Writing).',
-        highlights: [
-          'Designed system architecture and RESTful API with ASP.NET Core; built database schema with SQL Server.',
-          'Built entire Angular 18 frontend including exam UI, results dashboard, and admin panel.',
-          'Developed Reading flow — question sets, timed practice, and automated score tracking.',
-          'Developed Writing flow — essay submission with AI scoring and auto-generated feedback.',
-          'Built Mock Test module — full 4-skill simulation aligned with real TOEIC structure and scoring.',
-          'Wrote 500+ test cases (Unit, Integration, System, AI result) to validate grading logic.',
-          'Led sprint planning, task assignment, and code review for a team of 5.',
+        name: 'Hades Epay',
+        id: 'hadesepay',
+        sub: 'Digital Payment Platform',
+        type: 'Fintech',
+        period: 'Oct 2025 — Present',
+        role: 'Full Stack Developer',
+        description: 'A comprehensive digital payment platform providing virtual accounts, e-wallets, and payment gateway solutions for businesses in Vietnam.',
+        images: [
+          '/project/hadesepay/Screenshot_11-6-2026_221016_www.hadesepay.com.jpeg',
+          '/project/hadesepay/Screenshot_11-6-2026_221035_www.hadesepay.com.jpeg',
+          '/project/hadesepay/Screenshot_11-6-2026_221054_www.hadesepay.com.jpeg',
+          '/project/hadesepay/Screenshot_11-6-2026_221123_www.hadesepay.com.jpeg',
+          '/project/hadesepay/Screenshot_11-6-2026_221144_www.hadesepay.com.jpeg',
+          '/project/hadesepay/Screenshot_11-6-2026_22128_www.hadesepay.com.jpeg',
+          '/project/hadesepay/Screenshot_11-6-2026_22949_www.hadesepay.com.jpeg'
         ],
-        tech: ['ASP.NET Core API', 'Angular 18', 'SQL Server', 'xUnit', 'Azure AI', 'Docker'],
-        link: null,
+        highlights: [
+          'Implemented secure virtual account management system.',
+          'Developed e-wallet features with real-time transaction tracking.',
+          'Integrated with multiple bank partners for seamless payments.',
+          'Built responsive and user-friendly merchant dashboard.'
+        ],
+        tech: ['.NET Core 8', 'SQL Server', 'Next.js', 'Tailwind CSS', 'Redux'],
+        link: 'https://www.hadesepay.com/',
       },
       {
         name: 'MediMate',
-        sub: 'AI-Powered Medical E-commerce',
-        type: 'Personal Project',
-        period: 'Jan 2026 — Feb 2026',
-        role: 'Sole Developer (Design, Development & Deployment)',
-        description: 'Full-stack pharmaceutical e-commerce platform with AI health consultation, real-time payment webhooks, admin analytics, and role-based access control.',
-        highlights: [
-          'Built full-stack pharmaceutical e-commerce with Next.js 16 API Routes, product catalog, cart, and checkout.',
-          'Integrated SePay payment gateway with real-time webhooks for automatic order status updates.',
-          'Implemented Google Gemini AI health consultation chatbot with conversation history.',
-          'Developed admin dashboard with revenue/order analytics (Recharts) and Excel export.',
-          'Applied role-based access control via Next.js Middleware to protect admin routes.',
-          'Optimized performance with parallel Supabase queries and SWR client-side caching; avg load time 1.8s.',
-          'Deployed on Vercel with automated CI/CD from GitHub.',
+        id: 'medimate',
+        sub: 'Medical Supplies & First Aid E-commerce',
+        type: 'Healthcare E-commerce',
+        period: 'Jun 2025 — Sep 2025',
+        role: 'Full Stack Developer',
+        description: 'An specialized e-commerce platform for high-quality medical equipment and first aid supplies, designed to provide fast access to essential healthcare tools.',
+        images: [
+          '/project/medimate/Screenshot_11-6-2026_221326_www.medimate-socuuyte.com.jpeg',
+          '/project/medimate/Screenshot_11-6-2026_22228_www.medimate-socuuyte.com.jpeg',
+          '/project/medimate/Screenshot_11-6-2026_2231_www.medimate-socuuyte.com.jpeg',
+          '/project/medimate/Screenshot_11-6-2026_22355_www.medimate-socuuyte.com.jpeg',
+          '/project/medimate/Screenshot_11-6-2026_22612_www.medimate-socuuyte.com.jpeg',
+          '/project/medimate/Screenshot_11-6-2026_22646_www.medimate-socuuyte.com.jpeg'
         ],
-        tech: ['Next.js 16', 'TypeScript', 'Tailwind CSS v4', 'PostgreSQL (Supabase)', 'Google Gemini AI', 'SePay / VietQR', 'Recharts', 'SWR', 'Vercel'],
+        highlights: [
+          'Developed robust product catalog with advanced search and filtering.',
+          'Implemented secure checkout process with multiple payment options.',
+          'Built a first aid guide system for emergency situations.',
+          'Optimized platform performance for mobile users.'
+        ],
+        tech: ['.NET Core 8', 'PostgreSQL', 'Angular 18', 'Tailwind CSS', 'Docker'],
         link: 'https://www.medimate-socuuyte.com/',
       },
     ],

@@ -91,11 +91,6 @@ export default function Contact({ onContactClick }: ContactProps) {
           </motion.div>
         </div>
 
-        {/* Footer */}
-        <div className="mt-24 pt-8 border-t border-[#2e2e2e] flex flex-wrap items-center justify-between gap-4">
-          <p className="mono text-[12px] text-[#555555]">{t.footer.copy}</p>
-          <p className="mono text-[12px] text-[#555555]">Built with Next.js · Framer Motion</p>
-        </div>
       </div>
     </section>
   );

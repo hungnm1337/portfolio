@@ -70,6 +70,7 @@ export default function Hero({ onContactClick }: HeroProps) {
               className="font-[family-name:var(--font-heading)] text-[clamp(18px,2.5vw,26px)] font-light text-[#888888] mb-5"
             >
               {t.hero.role}
+              
             </motion.p>
 
             <motion.p

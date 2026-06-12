@@ -54,11 +54,8 @@ const vi = {
       {
         label: 'Tools',
         items: ['Git / GitHub', 'Jira', 'Agile / Scrum'],
-      },
-      {
-        label: 'Ngoại ngữ',
-        items: ['Tiếng Anh — B1 Trung cấp'],
-      },
+      }
+      
     ],
   },
   experience: {
@@ -94,48 +91,62 @@ const vi = {
       school: 'FPT University',
       period: 'Tháng 9/2021 — Tháng 12/2025',
       location: 'Hà Nội',
-      detail: 'Chuyên ngành: Công nghệ .NET · GPA: 3.02/4.0',
+      major: 'Chuyên ngành: Công nghệ .NET',
+      gpa: 'GPA: 3.02/4.0',
     },
   },
   projects: {
     title: 'Dự án',
     items: [
       {
-        name: 'Lumina',
-        sub: 'AI-Powered TOEIC Practice System',
-        type: 'Đồ án tốt nghiệp · Đại học FPT',
-        period: 'Tháng 9/2024 — Tháng 12/2025',
-        role: 'Trưởng nhóm & Lập trình viên Full Stack (Toàn bộ trách nhiệm)',
-        description: 'Nền tảng luyện thi TOEIC toàn diện với chấm điểm tự động bằng AI cho cả 4 kỹ năng (Nghe, Đọc, Nói, Viết).',
-        highlights: [
-          'Thiết kế kiến trúc hệ thống và RESTful API với ASP.NET Core; xây dựng schema cơ sở dữ liệu với SQL Server.',
-          'Xây dựng toàn bộ frontend Angular 18 gồm giao diện thi, dashboard kết quả và trang quản trị.',
-          'Phát triển luồng Reading — bộ câu hỏi, luyện tập có tính giờ và theo dõi kết quả chấm điểm tự động.',
-          'Phát triển luồng Writing — nộp bài luận với chấm điểm bằng AI và tạo phản hồi tự động.',
-          'Xây dựng module Mock Test — bài thi mô phỏng 4 kỹ năng đầy đủ theo cấu trúc và thang điểm TOEIC.',
-          'Viết 500+ test case (Unit, Integration, System, AI result) để kiểm tra logic chấm điểm.',
-          'Dẫn dắt lập kế hoạch sprint, phân công nhiệm vụ và code review cho nhóm 5 người.',
+        name: 'Hades Epay',
+        id: 'hadesepay',
+        sub: 'Nền tảng thanh toán số',
+        type: 'Fintech',
+        period: 'Tháng 10/2025 — Hiện tại',
+        role: 'Lập trình viên Full Stack',
+        description: 'Một nền tảng thanh toán số toàn diện cung cấp giải pháp tài khoản định danh, ví điện tử và cổng thanh toán cho doanh nghiệp tại Việt Nam.',
+        images: [
+          '/project/hadesepay/Screenshot_11-6-2026_221016_www.hadesepay.com.jpeg',
+          '/project/hadesepay/Screenshot_11-6-2026_221035_www.hadesepay.com.jpeg',
+          '/project/hadesepay/Screenshot_11-6-2026_221054_www.hadesepay.com.jpeg',
+          '/project/hadesepay/Screenshot_11-6-2026_221123_www.hadesepay.com.jpeg',
+          '/project/hadesepay/Screenshot_11-6-2026_221144_www.hadesepay.com.jpeg',
+          '/project/hadesepay/Screenshot_11-6-2026_22128_www.hadesepay.com.jpeg',
+          '/project/hadesepay/Screenshot_11-6-2026_22949_www.hadesepay.com.jpeg'
         ],
-        tech: ['ASP.NET Core API', 'Angular 18', 'SQL Server', 'xUnit', 'Azure AI', 'Docker'],
-        link: null,
+        highlights: [
+          'Triển khai hệ thống quản lý tài khoản định danh bảo mật.',
+          'Phát triển tính năng ví điện tử với theo dõi giao dịch thời gian thực.',
+          'Tích hợp với nhiều đối tác ngân hàng để thanh toán liền mạch.',
+          'Xây dựng dashboard quản trị thân thiện và tương thích đa thiết bị.'
+        ],
+        tech: ['.NET Core 8', 'SQL Server', 'Next.js', 'Tailwind CSS', 'Redux'],
+        link: 'https://www.hadesepay.com/',
       },
       {
         name: 'MediMate',
-        sub: 'AI-Powered Medical E-commerce',
-        type: 'Dự án cá nhân',
-        period: 'Tháng 1/2026 — Tháng 2/2026',
-        role: 'Lập trình viên duy nhất (Thiết kế, Phát triển & Triển khai)',
-        description: 'Nền tảng thương mại điện tử dược phẩm full-stack với tư vấn sức khỏe AI, webhook thanh toán thời gian thực, phân tích dữ liệu quản trị và kiểm soát truy cập theo vai trò.',
-        highlights: [
-          'Xây dựng thương mại điện tử dược phẩm full-stack với Next.js 16 API Routes, danh mục sản phẩm, giỏ hàng và quy trình thanh toán.',
-          'Tích hợp cổng thanh toán SePay với webhook thời gian thực để tự động cập nhật trạng thái đơn hàng.',
-          'Triển khai chatbot tư vấn sức khỏe Google Gemini AI với lịch sử hội thoại.',
-          'Phát triển dashboard quản trị với phân tích doanh thu/đơn hàng (Recharts) và xuất file Excel.',
-          'Áp dụng kiểm soát truy cập theo vai trò bằng Next.js Middleware để bảo vệ các route quản trị.',
-          'Tối ưu hiệu suất với truy vấn Supabase song song và SWR cache; thời gian tải trung bình 1.8s.',
-          'Triển khai trên Vercel với CI/CD tự động từ GitHub.',
+        id: 'medimate',
+        sub: 'Thương mại điện tử Vật tư Y tế & Sơ cứu',
+        type: 'Healthcare E-commerce',
+        period: 'Tháng 6/2025 — Tháng 9/2025',
+        role: 'Lập trình viên Full Stack',
+        description: 'Nền tảng thương mại điện tử chuyên biệt cho thiết bị y tế chất lượng cao và dụng cụ sơ cứu, được thiết kế để cung cấp khả năng tiếp cận nhanh chóng các công cụ y tế thiết yếu.',
+        images: [
+          '/project/medimate/Screenshot_11-6-2026_221326_www.medimate-socuuyte.com.jpeg',
+          '/project/medimate/Screenshot_11-6-2026_22228_www.medimate-socuuyte.com.jpeg',
+          '/project/medimate/Screenshot_11-6-2026_2231_www.medimate-socuuyte.com.jpeg',
+          '/project/medimate/Screenshot_11-6-2026_22355_www.medimate-socuuyte.com.jpeg',
+          '/project/medimate/Screenshot_11-6-2026_22612_www.medimate-socuuyte.com.jpeg',
+          '/project/medimate/Screenshot_11-6-2026_22646_www.medimate-socuuyte.com.jpeg'
         ],
-        tech: ['Next.js 16', 'TypeScript', 'Tailwind CSS v4', 'PostgreSQL (Supabase)', 'Google Gemini AI', 'SePay / VietQR', 'Recharts', 'SWR', 'Vercel'],
+        highlights: [
+          'Phát triển danh mục sản phẩm mạnh mẽ với tìm kiếm và lọc nâng cao.',
+          'Triển khai quy trình thanh toán bảo mật với nhiều lựa chọn.',
+          'Xây dựng hệ thống hướng dẫn sơ cứu cho các tình huống khẩn cấp.',
+          'Tối ưu hóa hiệu suất nền tảng cho người dùng di động.'
+        ],
+        tech: ['.NET Core 8', 'PostgreSQL', 'Angular 18', 'Tailwind CSS', 'Docker'],
         link: 'https://www.medimate-socuuyte.com/',
       },
     ],
