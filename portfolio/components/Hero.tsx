@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 import { ArrowDown, Mail, Phone, MapPin, Calendar, User } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -41,11 +42,49 @@ const getHref = (label: string, value: string): string | undefined => {
 
 export default function Hero({ onContactClick }: HeroProps) {
   const { t } = useLanguage();
+  const [bgIndex, setBgIndex] = useState(0);
+  const bgImages = ['/image/bg1.jpg', '/image/bg2.jpg', '/image/bg3.jpg'];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setBgIndex((prev) => (prev + 1) % bgImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <section id="hero" className="min-h-screen flex flex-col justify-center pt-24 pb-16 relative overflow-hidden">
-      {/* Linear gradient background on the right side */}
-      <div className="absolute top-0 right-0 w-full lg:w-1/2 h-full bg-gradient-to-l from-white/[0.06] to-transparent pointer-events-none -z-10" />
+      {/* Background Slideshow */}
+      <div className="absolute inset-0 -z-20 bg-[#050505]">
+        {bgImages.map((src, idx) => (
+          <motion.div
+            key={src}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: bgIndex === idx ? 1 : 0 }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
+            className="absolute inset-0"
+          >
+            <Image
+              src={src}
+              alt={`Hero Background ${idx + 1}`}
+              fill
+              className="object-cover"
+              priority={idx === 0}
+            />
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Overall dark overlay to dim the images globally */}
+      <div className="absolute inset-0 -z-10 bg-[#050505]/50 pointer-events-none" />
+
+      {/* Overlay: Blurred on the left, clear on the right */}
+      <div 
+        className="absolute inset-0 -z-10 bg-[#050505]/60 backdrop-blur-xl pointer-events-none" 
+        style={{ WebkitMaskImage: 'linear-gradient(to right, black 30%, transparent 80%)', maskImage: 'linear-gradient(to right, black 30%, transparent 80%)' }}
+      />
+      {/* Dark gradient for text readability on the left */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#050505]/95 via-[#050505]/80 to-transparent pointer-events-none" />
       
       <div className="wrap relative z-10">
 
