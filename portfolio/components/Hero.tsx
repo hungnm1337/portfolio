@@ -43,8 +43,11 @@ export default function Hero({ onContactClick }: HeroProps) {
   const { t } = useLanguage();
 
   return (
-    <section id="hero" className="min-h-screen flex flex-col justify-center pt-24 pb-16 relative">
-      <div className="wrap">
+    <section id="hero" className="min-h-screen flex flex-col justify-center pt-24 pb-16 relative overflow-hidden">
+      {/* Linear gradient background on the right side */}
+      <div className="absolute top-0 right-0 w-full lg:w-1/2 h-full bg-gradient-to-l from-white/[0.06] to-transparent pointer-events-none -z-10" />
+      
+      <div className="wrap relative z-10">
 
         {/* Top: Name + Role + CTA + Socials | Avatar */}
         <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-12 mb-16">

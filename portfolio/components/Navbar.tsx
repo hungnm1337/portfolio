@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Download } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const NAV_IDS = ['about', 'skills', 'experience', 'projects', 'contact'] as const;
@@ -71,6 +71,17 @@ export default function Navbar() {
 
         {/* Right */}
         <div className="flex items-center gap-3">
+          <a
+            href="/CV - Nguyen Manh Hung - .NET Developer.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 bg-[#f0f0f0] text-[#0f0f0f] rounded-lg px-3 py-1.5 text-[12px] font-bold tracking-wide hover:bg-[#ffffff] hover:shadow-[0_0_15px_rgba(240,240,240,0.15)] transition-all duration-200"
+            title="Download CV"
+          >
+            <Download size={14} strokeWidth={2.5} />
+            <span>CV</span>
+          </a>
+
           <button
             onClick={toggleLang}
             className="flex items-center gap-1 bg-[#1c1c1c] border border-[#2e2e2e] rounded-lg px-3 py-1.5 mono text-[11px] font-medium text-[#888888] tracking-wider hover:bg-[#242424] hover:border-[#3a3a3a] transition-all duration-200 cursor-pointer"

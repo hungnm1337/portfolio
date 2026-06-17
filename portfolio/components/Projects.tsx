@@ -118,7 +118,7 @@ export default function Projects() {
                 </div>
 
                 {/* Image Slider Side */}
-                <div className="w-full lg:w-1/2 relative bg-[#141414] border-b lg:border-b-0 lg:border-l border-[#2e2e2e] group/swiper order-1 lg:order-2">
+                <div className="w-full lg:w-1/2 relative bg-[#141414] border-b lg:border-b-0 lg:border-l border-[#2e2e2e] group/swiper order-1 lg:order-2 min-h-[300px] md:min-h-[450px] lg:min-h-[400px]">
                   <Swiper
                     modules={[Pagination, Navigation, Autoplay]}
                     pagination={{ 
@@ -134,7 +134,7 @@ export default function Projects() {
                       disableOnInteraction: false,
                     }}
                     loop={true}
-                    className="h-[300px] md:h-[450px] lg:h-[600px] w-full"
+                    className="absolute inset-0 w-full h-full"
                   >
                     {project.images?.map((img: string, idx: number) => (
                       <SwiperSlide key={idx} className="relative w-full h-full overflow-hidden">
