@@ -136,7 +136,6 @@ const vi = {
           '/project/medimate/Screenshot_11-6-2026_221326_www.medimate-socuuyte.com.jpeg',
           '/project/medimate/Screenshot_11-6-2026_22228_www.medimate-socuuyte.com.jpeg',
           '/project/medimate/Screenshot_11-6-2026_2231_www.medimate-socuuyte.com.jpeg',
-          '/project/medimate/Screenshot_11-6-2026_22355_www.medimate-socuuyte.com.jpeg',
           '/project/medimate/Screenshot_11-6-2026_22612_www.medimate-socuuyte.com.jpeg',
           '/project/medimate/Screenshot_11-6-2026_22646_www.medimate-socuuyte.com.jpeg'
         ],
