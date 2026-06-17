@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   keywords: ['Full Stack Developer', 'ASP.NET Core', 'Next.js', 'Angular', 'Portfolio', 'Nguyen Manh Hung'],
   authors: [{ name: 'Nguyen Manh Hung' }],
   openGraph: {
-    title: 'Nguyen Manh Hung — Full Stack Developer',
+    title: 'Nguyen Manh Hung - Full Stack Developer',
     description: 'Portfolio of Nguyen Manh Hung, a Full Stack Developer based in Hanoi, Vietnam.',
     type: 'website',
   },
