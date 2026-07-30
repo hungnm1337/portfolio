@@ -39,14 +39,14 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-          ? 'py-3 bg-[#0f0f0f]/90 backdrop-blur-xl border-b border-[#2e2e2e]'
+          ? 'py-3 bg-[#f4f4f0]/90 backdrop-blur-xl border-b border-[#d0d0d0]'
           : 'py-5 bg-transparent border-b border-transparent'
         }`}
     >
       <div className="wrap flex items-center justify-between gap-6">
         {/* Logo */}
         <Link href="#" className="flex items-baseline gap-0.5 heading-font">
-          <span className="text-xl font-bold text-[#f0f0f0] tracking-tight">NMH</span>
+          <span className="text-xl font-bold text-[#0f0f0f] tracking-tight">NMH</span>
           <span className="text-2xl font-bold text-[#888888]">.</span>
         </Link>
 
@@ -56,13 +56,13 @@ export default function Navbar() {
             <a
               key={id}
               href={`#${id}`}
-              className={`text-[13.5px] transition-colors duration-200 relative pb-0.5 group ${active === id ? 'text-[#f0f0f0]' : 'text-[#888888] hover:text-[#f0f0f0]'
+              className={`text-[13.5px] transition-colors duration-200 relative pb-0.5 group ${active === id ? 'text-[#0f0f0f]' : 'text-[#888888] hover:text-[#0f0f0f]'
                 }`}
               onClick={() => setOpen(false)}
             >
               {navLabels[id]}
               <span
-                className={`absolute bottom-0 left-0 h-px bg-[#f0f0f0] transition-all duration-250 ${active === id ? 'w-full' : 'w-0 group-hover:w-full'
+                className={`absolute bottom-0 left-0 h-px bg-[#0f0f0f] transition-all duration-250 ${active === id ? 'w-full' : 'w-0 group-hover:w-full'
                   }`}
               />
             </a>
@@ -75,7 +75,7 @@ export default function Navbar() {
             href="/CV - Nguyen Manh Hung - .NET Developer.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 bg-[#f0f0f0] text-[#0f0f0f] rounded-lg px-3 py-1.5 text-[12px] font-bold tracking-wide hover:bg-[#ffffff] hover:shadow-[0_0_15px_rgba(240,240,240,0.15)] transition-all duration-200"
+            className="flex items-center gap-1.5 bg-[#0f0f0f] text-[#f0f0f0] rounded-lg px-3 py-1.5 text-[12px] font-bold tracking-wide hover:bg-[#333333] transition-all duration-200"
             title="Download CV"
           >
             <Download size={14} strokeWidth={2.5} />
@@ -84,16 +84,16 @@ export default function Navbar() {
 
           <button
             onClick={toggleLang}
-            className="flex items-center gap-1 bg-[#1c1c1c] border border-[#2e2e2e] rounded-lg px-3 py-1.5 mono text-[11px] font-medium text-[#888888] tracking-wider hover:bg-[#242424] hover:border-[#3a3a3a] transition-all duration-200 cursor-pointer"
+            className="flex items-center gap-1 bg-white border border-[#d0d0d0] rounded-lg px-3 py-1.5 mono text-[11px] font-medium text-[#555555] tracking-wider hover:bg-[#f0f0f0] hover:border-[#bbbbbb] transition-all duration-200 cursor-pointer"
             aria-label="Toggle language"
           >
-            <span className={lang === 'vi' ? 'text-[#f0f0f0]' : ''}>VI</span>
-            <span className="text-[#555555]">/</span>
-            <span className={lang === 'en' ? 'text-[#f0f0f0]' : ''}>EN</span>
+            <span className={lang === 'vi' ? 'text-[#0f0f0f]' : ''}> VI</span>
+            <span className="text-[#bbbbbb]">/</span>
+            <span className={lang === 'en' ? 'text-[#0f0f0f]' : ''}>EN</span>
           </button>
 
           <button
-            className="md:hidden flex items-center justify-center w-9 h-9 bg-[#1c1c1c] border border-[#2e2e2e] rounded-lg text-[#f0f0f0] hover:bg-[#242424] transition-all cursor-pointer"
+            className="md:hidden flex items-center justify-center w-9 h-9 bg-white border border-[#d0d0d0] rounded-lg text-[#0f0f0f] hover:bg-[#f0f0f0] transition-all cursor-pointer"
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
           >
@@ -104,12 +104,12 @@ export default function Navbar() {
 
       {/* Mobile drawer */}
       {open && (
-        <div className="md:hidden bg-[#0f0f0f]/98 backdrop-blur-xl border-b border-[#2e2e2e] px-8 pb-6 pt-2 flex flex-col gap-1">
+        <div className="md:hidden bg-[#f4f4f0]/98 backdrop-blur-xl border-b border-[#d0d0d0] px-8 pb-6 pt-2 flex flex-col gap-1">
           {NAV_IDS.map((id) => (
             <a
               key={id}
               href={`#${id}`}
-              className="py-3 text-[15px] text-[#888888] border-b border-[#2e2e2e] last:border-none hover:text-[#f0f0f0] transition-colors"
+              className="py-3 text-[15px] text-[#555555] border-b border-[#e0e0e0] last:border-none hover:text-[#0f0f0f] transition-colors"
               onClick={() => setOpen(false)}
             >
               {navLabels[id]}

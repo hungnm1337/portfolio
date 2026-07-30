@@ -8,16 +8,16 @@
 
 /* ── Design tokens ── */
 @theme {
-  --color-bg: #0f0f0f;
-  --color-bg2: #161616;
-  --color-surface: #1c1c1c;
-  --color-surface2: #242424;
-  --color-border: #2e2e2e;
-  --color-border2: #3a3a3a;
-  --color-text: #f0f0f0;
-  --color-muted: #888888;
-  --color-dim: #555555;
-  --color-accent: #e8e8e8;
+  --color-bg: #f4f4f0;
+  --color-bg2: #ebebeb;
+  --color-surface: #ffffff;
+  --color-surface2: #f0f0ec;
+  --color-border: #d8d8d8;
+  --color-border2: #c0c0c0;
+  --color-text: #0f0f0f;
+  --color-muted: #555555;
+  --color-dim: #888888;
+  --color-accent: #1a1a1a;
 
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -42,8 +42,8 @@
 
   body {
     font-family: 'Inter', sans-serif;
-    background-color: #0f0f0f;
-    color: #f0f0f0;
+    background-color: #f4f4f0;
+    color: #0f0f0f;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
@@ -78,21 +78,21 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #0f0f0f;
+    background: #ebebeb;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #242424;
+    background: #c0c0c0;
     border-radius: 3px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #3a3a3a;
+    background: #999999;
   }
 
   ::selection {
-    background: #242424;
-    color: #f0f0f0;
+    background: #d0d0d0;
+    color: #0f0f0f;
   }
 }
 
@@ -115,7 +115,7 @@
   .section-py-alt {
     padding-top: 96px;
     padding-bottom: 96px;
-    background-color: #161616;
+    background-color: #ebebeb;
   }
 
   .section-label {
@@ -123,7 +123,7 @@
     font-size: 12px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: #555555;
+    color: #888888;
     margin-bottom: 8px;
   }
 
@@ -131,13 +131,13 @@
     font-family: 'Outfit', sans-serif;
     font-size: clamp(28px, 4vw, 40px);
     font-weight: 700;
-    color: #f0f0f0;
+    color: #0f0f0f;
   }
 
   .section-line {
     width: 40px;
     height: 2px;
-    background-color: #3a3a3a;
+    background-color: #c0c0c0;
     margin-top: 16px;
     margin-bottom: 56px;
   }

@@ -6,6 +6,7 @@ import Hero from '@/components/Hero';
 import Skills from '@/components/Skills';
 import Experience from '@/components/Experience';
 import Projects from '@/components/Projects';
+import Globe3DDemo from '@/components/Globe3DDemo';
 import Contact from '@/components/Contact';
 import ContactModal from '@/components/ContactModal';
 import FloatingContactButton from '@/components/FloatingContactButton';

@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { MapPin, Calendar, GraduationCap, Briefcase } from 'lucide-react';
+import { MapPin, Calendar, Briefcase } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Experience() {
@@ -29,7 +29,7 @@ export default function Experience() {
           {/* Work experience timeline */}
           <div className="relative">
             {/* Vertical line */}
-            <div className="absolute left-[7px] top-2 bottom-2 w-px bg-[#2e2e2e]" />
+            <div className="absolute left-[7px] top-2 bottom-2 w-px bg-[#d0d0d0]" />
 
             <div className="flex flex-col gap-10">
               {items.map((job, i) => (
@@ -42,28 +42,28 @@ export default function Experience() {
                   viewport={{ once: true, margin: '-60px' }}
                 >
                   {/* Dot */}
-                  <div className="absolute left-0 top-[6px] w-3.5 h-3.5 rounded-full border-2 border-[#3a3a3a] bg-[#0f0f0f]" />
+                  <div className="absolute left-0 top-[6px] w-3.5 h-3.5 rounded-full border-2 border-[#aaaaaa] bg-[#f4f4f0]" />
 
                   {/* Card */}
-                  <div className="bg-[#1c1c1c] border border-[#2e2e2e] rounded-2xl p-6 hover:border-[#3a3a3a] transition-all duration-300">
+                  <div className="bg-white border border-[#d8d8d8] rounded-2xl p-6 hover:border-[#bbbbbb] transition-all duration-300 shadow-sm shadow-black/5">
                     <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 mb-4">
                       <div className="flex-1 min-w-0 sm:pr-4">
                         <div className="flex items-center gap-2 mb-1">
-                          <Briefcase size={13} className="text-[#555555]" />
-                          <span className="font-[family-name:var(--font-heading)] text-[15px] font-semibold text-[#f0f0f0] tracking-wider truncate">
+                          <Briefcase size={13} className="text-[#888888]" />
+                          <span className="font-[family-name:var(--font-heading)] text-[15px] font-semibold text-[#333333] tracking-wider truncate">
                             {job.company}
                           </span>
                         </div>
-                        <h3 className="font-[family-name:var(--font-heading)] text-[17px] font-semibold text-[#f0f0f0] break-words">
+                        <h3 className="font-[family-name:var(--font-heading)] text-[17px] font-semibold text-[#0f0f0f] break-words">
                           {job.position}
                         </h3>
                       </div>
                       <div className="shrink-0 mt-1 sm:mt-0">
-                        <div className="flex items-center sm:justify-end gap-1.5 font-[family-name:var(--font-heading)] text-[15px] font-semibold text-[#f0f0f0] mb-1 sm:mb-0.5">
+                        <div className="flex items-center sm:justify-end gap-1.5 font-[family-name:var(--font-heading)] text-[15px] font-semibold text-[#0f0f0f] mb-1 sm:mb-0.5">
                           <Calendar size={15} className="shrink-0" />
                           <span>{job.period}</span>
                         </div>
-                        <div className="flex items-center sm:justify-end gap-1 text-[12px] text-[#555555]">
+                        <div className="flex items-center sm:justify-end gap-1 text-[12px] text-[#888888]">
                           <MapPin size={12} className="shrink-0" />
                           <span>{job.location}</span>
                         </div>
@@ -72,8 +72,8 @@ export default function Experience() {
 
                     <ul className="flex flex-col gap-2">
                       {job.bullets.map((b, bi) => (
-                        <li key={bi} className="flex gap-3 text-[13.5px] text-[#888888] leading-relaxed">
-                          <span className="text-[#3a3a3a] mt-1.5 shrink-0">—</span>
+                        <li key={bi} className="flex gap-3 text-[13.5px] text-[#555555] leading-relaxed">
+                          <span className="text-[#bbbbbb] mt-1.5 shrink-0">—</span>
                           <span>{b}</span>
                         </li>
                       ))}
@@ -92,12 +92,12 @@ export default function Experience() {
             transition={{ duration: 0.55, delay: 0.2 }}
             viewport={{ once: true, margin: '-60px' }}
           >
-            <p className="font-[family-name:var(--font-mono)] text-[11px] tracking-[0.12em] uppercase text-[#555555] mb-4">
+            <p className="font-[family-name:var(--font-mono)] text-[11px] tracking-[0.12em] uppercase text-[#888888] mb-4">
               {education.sectionTitle}
             </p>
-            <div className="bg-[#1c1c1c] border border-[#2e2e2e] rounded-2xl p-6 hover:border-[#3a3a3a] transition-all duration-300">
+            <div className="bg-white border border-[#d8d8d8] rounded-2xl p-6 hover:border-[#bbbbbb] transition-all duration-300 shadow-sm shadow-black/5">
               <div className="flex items-start gap-4 mb-4">
-                <div className="w-12 h-12 rounded-lg bg-white border border-[#2e2e2e] flex items-center justify-center shrink-0 overflow-hidden p-1">
+                <div className="w-12 h-12 rounded-lg bg-white border border-[#e0e0e0] flex items-center justify-center shrink-0 overflow-hidden p-1">
                   <Image 
                     src="/FPT-University-Logo-Vector.svg-.png" 
                     alt="FPT University" 
@@ -107,27 +107,27 @@ export default function Experience() {
                   />
                 </div>
                 <div>
-                  <h3 className="font-[family-name:var(--font-heading)] text-[15px] font-semibold text-[#f0f0f0] leading-snug">
+                  <h3 className="font-[family-name:var(--font-heading)] text-[15px] font-semibold text-[#0f0f0f] leading-snug">
                     {education.degree}
                   </h3>
-                  <p className="text-[13px] text-[#888888] mt-0.5">{education.school}</p>
+                  <p className="text-[13px] text-[#555555] mt-0.5">{education.school}</p>
                 </div>
               </div>
 
-              <div className="flex flex-col gap-2 pt-4 border-t border-[#2e2e2e]">
-                <div className="flex items-center gap-2 text-[12.5px] text-[#555555]">
+              <div className="flex flex-col gap-2 pt-4 border-t border-[#e0e0e0]">
+                <div className="flex items-center gap-2 text-[12.5px] text-[#888888]">
                   <Calendar size={12} />
                   <span>{education.period}</span>
                 </div>
-                <div className="flex items-center gap-2 text-[12.5px] text-[#555555]">
+                <div className="flex items-center gap-2 text-[12.5px] text-[#888888]">
                   <MapPin size={12} />
                   <span>{education.location}</span>
                 </div>
                 <div className="mt-2 space-y-1">
-                  <p className="text-[13px] text-[#888888] font-[family-name:var(--font-mono)]">
+                  <p className="text-[13px] text-[#555555] font-[family-name:var(--font-mono)]">
                     {education.major}
                   </p>
-                  <p className="text-[13px] text-[#888888] font-[family-name:var(--font-mono)]">
+                  <p className="text-[13px] text-[#555555] font-[family-name:var(--font-mono)]">
                     {education.gpa}
                   </p>
                 </div>

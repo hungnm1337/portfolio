@@ -42,21 +42,19 @@ export default function Contact({ onContactClick }: ContactProps) {
             transition={{ duration: 0.6 }}
             viewport={{ once: true, margin: '-60px' }}
           >
-            <p className="text-[16px] text-[#888888] leading-relaxed mb-8">
+            <p className="text-[16px] text-[#555555] leading-relaxed mb-8">
               {t.contact.sub}
             </p>
 
-            {/* Primary CTA — opens modal */}
+            {/* Primary CTA */}
             <button
               onClick={onContactClick}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#f0f0f0] text-[#0f0f0f] text-[14px] font-semibold hover:bg-[#cccccc] transition-all duration-200 hover:-translate-y-px cursor-pointer mb-4"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#0f0f0f] text-[#f0f0f0] text-[14px] font-semibold hover:bg-[#333333] transition-all duration-200 hover:-translate-y-px cursor-pointer mb-4"
             >
               <MessageSquare size={15} />
               {t.contact.title}
               <ArrowRight size={14} />
             </button>
-
-
           </motion.div>
 
           {/* Links */}
@@ -73,16 +71,16 @@ export default function Contact({ onContactClick }: ContactProps) {
                 href={href}
                 target={href.startsWith('http') ? '_blank' : undefined}
                 rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                className="flex items-center gap-4 p-4 bg-[#1c1c1c] border border-[#2e2e2e] rounded-xl hover:border-[#3a3a3a] hover:-translate-y-0.5 transition-all duration-200 group"
+                className="flex items-center gap-4 p-4 bg-white border border-[#d8d8d8] rounded-xl hover:border-[#aaaaaa] hover:-translate-y-0.5 transition-all duration-200 group shadow-sm shadow-black/5"
               >
-                <span className="flex items-center justify-center w-9 h-9 rounded-lg bg-[#242424] border border-[#2e2e2e] text-[#888888] group-hover:text-[#f0f0f0] transition-colors shrink-0">
+                <span className="flex items-center justify-center w-9 h-9 rounded-lg bg-[#f4f4f0] border border-[#e0e0e0] text-[#555555] group-hover:text-[#0f0f0f] group-hover:bg-[#ebebeb] transition-colors shrink-0">
                   {icon}
                 </span>
                 <div>
-                  <p className="mono text-[11px] text-[#555555] uppercase tracking-wider mb-0.5">
+                  <p className="mono text-[11px] text-[#888888] uppercase tracking-wider mb-0.5">
                     {label}
                   </p>
-                  <p className="text-[14px] text-[#888888] group-hover:text-[#f0f0f0] transition-colors">
+                  <p className="text-[14px] text-[#555555] group-hover:text-[#0f0f0f] transition-colors">
                     {value}
                   </p>
                 </div>
