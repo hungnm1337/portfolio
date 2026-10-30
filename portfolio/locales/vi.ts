@@ -1,4 +1,4 @@
-const vi = {
+﻿const vi = {
   nav: {
     about: 'Giới thiệu',
     skills: 'Kỹ năng',
@@ -156,16 +156,40 @@ const vi = {
         period: 'Tháng 9/2025 — Tháng 12/2025',
         role: 'Trưởng nhóm',
         description: 'Nền tảng luyện thi TOEIC có AI hỗ trợ, bao gồm 2 kỹ năng, tích hợp mô hình Hugging Face để chấm điểm bài luận tự động và engine chấm điểm nền được tối ưu hóa cho kết quả thi nhanh.',
-        images: [],
+        images: [
+          '/project/lumina/lumina.jpeg',
+        ],
         highlights: [
           'Quản lý quy trình phát triển nền tảng TOEIC 2 kỹ năng, tối ưu engine chấm điểm nền để trả kết quả trong 5 giây.',
           'Tích hợp mô hình Hugging Face cho chấm điểm bài luận tự động, đạt độ chính xác 90%+ so với tiêu chí TOEIC chính thức.',
           'Viết 300+ test case bằng xUnit — đạt hơn 80% line coverage và 90% branch coverage trên các mô-đun cốt lõi.',
         ],
         tech: ['ASP.NET Core', 'Angular 18', 'SQL Server', 'xUnit', 'Hugging Face'],
-        link: 'https://github.com/hungnm1337/lumina_frontend',
+        link: 'https://lumina-frontend-self.vercel.app/',
         linkBackend: 'https://github.com/hungnm1337/lumina_backend',
       },
+      {
+        name: 'Tour 360',
+        id: 'tour360',
+        sub: 'Tham quan di tích lịch sử thực tế ảo',
+        type: 'AR / 360° Tour',
+        period: 'Tháng 10/2026 — Hiện tại',
+        role: 'Lập trình viên Full Stack',
+        description: 'Nền tảng tham quan ảo hiển thị các di tích lịch sử và khu tham quan dưới dạng thực tế tăng cường (AR) và góc nhìn 360°, mang trải nghiệm du lịch văn hóa sống động trực tiếp trên trình duyệt.',
+        images: [
+          '/project/tour360/Screenshot_30-10-2026_92110_vr-tour-six.vercel.app.jpeg',
+          '/project/tour360/Screenshot_30-10-2026_92127_vr-tour-six.vercel.app.jpeg',
+          '/project/tour360/Screenshot_30-10-2026_92139_vr-tour-six.vercel.app.jpeg',
+          '/project/tour360/Screenshot_30-10-2026_92311_vr-tour-six.vercel.app.jpeg',
+        ],
+        highlights: [
+          'Tích hợp góc nhìn 360° cho phép người dùng khám phá di tích lịch sử trực tiếp trên trình duyệt.',
+          'Áp dụng công nghệ AR để hiển thị thông tin và mô hình 3D chồng lên khung cảnh thực.',
+          'Xây dựng giao diện điều hướng trực quan, tối ưu trải nghiệm trên cả desktop và thiết bị di động.',
+        ],
+        tech: ['Next.js', 'Supabase', 'Tailwind CSS'],
+        link: 'https://vr-tour-six.vercel.app/',
+      }
     ],
   },
   contact: {

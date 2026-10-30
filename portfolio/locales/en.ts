@@ -1,4 +1,4 @@
-const en = {
+﻿const en = {
   nav: {
     about: 'About',
     skills: 'Skills',
@@ -156,16 +156,40 @@ const en = {
         period: 'Sep 2025 — Dec 2025',
         role: 'Team Leader',
         description: 'An AI-powered TOEIC practice platform covering 2 skills, featuring automated essay evaluation with Hugging Face models and optimized background scoring engines for fast exam results.',
-        images: [],
+        images: [
+          '/project/lumina/lumina.jpeg',
+        ],
         highlights: [
           'Managed development workflow for a 2-skill TOEIC platform, delivering exam results within 5 seconds.',
           'Integrated Hugging Face models for automated essay evaluation, achieving 90%+ grading alignment with official TOEIC criteria.',
           'Wrote 300+ unit test cases with xUnit — over 80% line coverage and 90% branch coverage on core modules.',
         ],
         tech: ['ASP.NET Core', 'Angular 18', 'SQL Server', 'xUnit', 'Hugging Face'],
-        link: 'https://github.com/hungnm1337/lumina_frontend',
+        link: 'https://lumina-frontend-self.vercel.app/',
         linkBackend: 'https://github.com/hungnm1337/lumina_backend',
       },
+      {
+        name: 'Tour 360',
+        id: 'tour360',
+        sub: 'AR Historical Sites Virtual Tour',
+        type: 'AR / 360° Tour',
+        period: 'Oct 2026 — Present',
+        role: 'Full Stack Developer',
+        description: 'A virtual tour platform showcasing historical sites and attractions through Augmented Reality (AR) and 360° views, delivering an immersive cultural tourism experience directly in the browser.',
+        images: [
+          '/project/tour360/Screenshot_30-10-2026_92110_vr-tour-six.vercel.app.jpeg',
+          '/project/tour360/Screenshot_30-10-2026_92127_vr-tour-six.vercel.app.jpeg',
+          '/project/tour360/Screenshot_30-10-2026_92139_vr-tour-six.vercel.app.jpeg',
+          '/project/tour360/Screenshot_30-10-2026_92311_vr-tour-six.vercel.app.jpeg',
+        ],
+        highlights: [
+          'Integrated 360° panoramic views letting users explore historical sites directly in the browser.',
+          'Applied AR technology to overlay information and 3D models onto real-world scenes.',
+          'Built an intuitive navigation UI optimized for both desktop and mobile devices.',
+        ],
+        tech: ['Next.js', 'Supabase', 'Tailwind CSS'],
+        link: 'https://vr-tour-six.vercel.app/',
+      }
     ],
   },
   contact: {
